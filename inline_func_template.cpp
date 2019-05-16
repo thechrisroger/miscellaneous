@@ -1,5 +1,6 @@
 /*
 *function template can also be inlined
+*templaztized inline functions instead inlined template function
 */
 #include <iostream>
 #include <typeinfo>
