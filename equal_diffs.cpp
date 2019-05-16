@@ -1,3 +1,7 @@
+/*
+*equal difference series 
+*online programming test from iqiyi
+*/
 #include<iostream>
 #include<set>
 
