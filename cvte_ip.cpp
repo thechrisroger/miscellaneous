@@ -1,3 +1,9 @@
+/*
+*resolve net ID from to IP address
+*but this still have a bug
+*we have terminate the the procedure when we first meet difference
+*/
+
 #include<iostream>
 #include<string>
 #include <bitset>
@@ -11,7 +17,7 @@ string CalculateNetmask(const char *rhs,const char* lhs)
     bitset<8> rhs_bits(stoi(string(rhs_str.begin(),rhs_str.begin() + dot_pos1)));
     bitset<8> lhs_bits(stoi(string(lhs_str.begin(),lhs_str.begin() + dot_pos2)));
     rhs_bits.operator&=(lhs_bits);
-    if(!rhs_bits.test(0))
+    if(rhs_bits.test(0))
     {
         return string("not within a subnetwork");
     }
