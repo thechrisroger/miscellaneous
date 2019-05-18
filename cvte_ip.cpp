@@ -28,7 +28,7 @@ string CalculateNetmask(const char *rhs,const char* lhs)
     dot_pos2 = lhs_str.find("." ,old_pos2 + 1);
     rhs_bits = stoi(string(rhs_str.begin() + old_pos1 + 1 ,rhs_str.begin() + dot_pos1));
     lhs_bits = stoi(string(lhs_str.begin() + old_pos2 + 1 ,lhs_str.begin() + dot_pos2));
-    rhs_bits.operator&=(lhs_bits);
+    rhs_bits.operator&=(lhs_bits);//find the equal bits instead of bit and
     netmask += to_string(rhs_bits.to_ulong()) + ".";
 
     old_pos1 = dot_pos1;
